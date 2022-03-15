@@ -51,7 +51,13 @@ public class BankApp {
                 System.out.println("0: To exit our bank.\n");
                 System.out.print("Your choice:");
                 choice = inpucik.nextInt();
-                inpucik.nextLine();
+
+                //jezeli zostalo stworzone juz 10 kont, to zamonituj i przejdz dalej w petli
+                if(iterator==10){
+                    System.out.println("No more accounts can be created!");
+                    continue;
+                }
+                //inpucik.nextLine();
 
                 switch (choice) {
                     case 1 -> {
@@ -60,12 +66,12 @@ public class BankApp {
 
                         //do obiektu na pozycji 'iterator' przypisz imie
                         System.out.println("Enter your name: ");
-                        name = inpucik.nextLine();
+                        name = inpucik.next();
                         accArray[iterator].setUserName(name);
 
                         //do obiektu na pozycji 'iterator' przypisz nazwisko
                         System.out.println("Enter your surname: ");
-                        surname = inpucik.nextLine();
+                        surname = inpucik.next();
                         accArray[iterator].setUserSurname(surname);
 
                         //przyjmujemy numer konta
@@ -161,6 +167,8 @@ public class BankApp {
                         brejker = false;
                     }
                 }
+                //brejker2 z powrotem na true, zeby dzialala petla while(brejker2) przy dodawaniu trzeciego konta
+                brejker2 = true;
 
         }
     }

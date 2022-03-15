@@ -23,6 +23,8 @@ public class BankTests {
 
         acc.deposit(140.23);
         Assert.assertEquals(140.23, acc.getAccBalance(), 0.01);
+        acc.deposit(20.00);
+        Assert.assertEquals(160.23, acc.getAccBalance(), 0.01);
 
     }
 
