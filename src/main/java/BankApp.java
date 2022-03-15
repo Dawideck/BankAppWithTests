@@ -16,7 +16,7 @@ public class BankApp {
 
 
         System.out.println("========================");
-        System.out.println("Welcome to our The 10 AccountsBank.");
+        System.out.println("Welcome to The 10 AccountsBank.");
         System.out.println("========================\n");
 
         System.out.println();
